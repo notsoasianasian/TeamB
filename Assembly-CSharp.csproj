@@ -10,7 +10,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace>
     </RootNamespace>
-    <ProjectGuid>{3E0393B3-2456-782C-EBB8-F4201DFAA4A4}</ProjectGuid>
+    <ProjectGuid>{50D33955-3189-5BD2-1A39-B9540531F1D1}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -61,6 +61,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\Camera\CameraFollow.cs" />
     <Compile Include="Assets\Scripts\Game Scripts\LevelController.cs" />
     <Compile Include="Assets\Scripts\Game Scripts\MainMenuController.cs" />
     <Compile Include="Assets\Scripts\Objects\Door.cs" />
@@ -70,17 +71,19 @@
     <Compile Include="Assets\Scripts\spider scripts\spider shooter\SpiderBulllet.cs" />
     <Compile Include="Assets\Scripts\spider scripts\spider shooter\SpiderShooter.cs" />
     <Compile Include="Assets\Scripts\spider scripts\spider walker\SpiderWalker.cs" />
+    <Compile Include="Assets\Scripts\UIScripts\MainMenu.cs" />
+    <Compile Include="Assets\Scripts\UIScripts\PauseMenu.cs" />
     <Reference Include="UnityEditor.StandardEvents">
-      <HintPath>D:/cit273/final project rpg/koda-prototype-v1.0/koda conceptv1.0/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
+      <HintPath>D:/cit273/final project rpg/TeamB/TeamB/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>D:/cit273/final project rpg/koda-prototype-v1.0/koda conceptv1.0/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>D:/cit273/final project rpg/TeamB/TeamB/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.PackageManagerUI.Editor">
-      <HintPath>D:/cit273/final project rpg/koda-prototype-v1.0/koda conceptv1.0/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+      <HintPath>D:/cit273/final project rpg/TeamB/TeamB/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>D:/cit273/final project rpg/koda-prototype-v1.0/koda conceptv1.0/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>D:/cit273/final project rpg/TeamB/TeamB/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>D:/unity/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -263,7 +266,7 @@
       <HintPath>D:/unity/Editor/Data/Managed/Unity.Locator.dll</HintPath>
     </Reference>
     <Reference Include="Facebook.Unity.Settings">
-      <HintPath>D:/cit273/final project rpg/koda-prototype-v1.0/koda conceptv1.0/Library/FacebookSDK/Facebook.Unity.Settings.dll</HintPath>
+      <HintPath>D:/cit273/final project rpg/TeamB/TeamB/Library/FacebookSDK/Facebook.Unity.Settings.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
       <HintPath>D:/unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>

@@ -12,40 +12,51 @@ public class PlayerScript : MonoBehaviour {
     public bool capVelocityEnabled = true;
     public float standingContactDistance = 0.1f;
     public float jumpSpeed = 50f;
+    private Animator anim;
 
     public void Awake()
     {
         playerRigidbody = GetComponent<Rigidbody2D>();
         playerCollider = GetComponent<Collider2D>();
+        anim = GetComponent<Animator>();
     }
 
     public void FixedUpdate()
     {
-        if(playerRigidbody != null)
+        if (playerRigidbody != null)
         {
             ApplyInput();
-            if(capVelocityEnabled)
+            if (capVelocityEnabled)
             {
                 CapVelocity();
             }
-            
+
         }
         else
         {
             Debug.LogWarning("Rigidbody not attached to player" + gameObject.name);
         }
-                
+
     }
 
-    public void ApplyInput ()
+    public void ApplyInput()
     {
         float xInput = Input.GetAxis("Horizontal");
-        float yInput = Input.GetAxis("Vertical");
+        bool yInput = Input.GetKeyDown(KeyCode.Space);
         //left right movement
         float xforce = xInput * moveSpeed * Time.deltaTime;
         float yForce = 0;
+
+        if (xInput != 0)
+        {
+            anim.SetBool("Walk", true);
+        }
+        else
+        {
+            anim.SetBool("Walk", false);
+        }
         //jumping
-        if (yInput > 0)
+        if (yInput == true)
         {
             if (IsOnTopOfCollider() && playerRigidbody.velocity.y == 0)
             {
@@ -57,6 +68,7 @@ public class PlayerScript : MonoBehaviour {
         Vector2 force = new Vector2(xforce, yForce);
 
         playerRigidbody.AddForce(force, ForceMode2D.Impulse);
+        
 
     }
 
@@ -93,4 +105,5 @@ public class PlayerScript : MonoBehaviour {
 
         return false;
     }
+        
 }

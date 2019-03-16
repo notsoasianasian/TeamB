@@ -61,18 +61,26 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\Game Scripts\LevelController.cs" />
+    <Compile Include="Assets\Scripts\Game Scripts\MainMenuController.cs" />
+    <Compile Include="Assets\Scripts\Objects\Door.cs" />
+    <Compile Include="Assets\Scripts\Objects\GemScript.cs" />
     <Compile Include="Assets\Scripts\Player Scripts\PlayerScript.cs" />
+    <Compile Include="Assets\Scripts\spider scripts\spider jumper\SpiderJumper.cs" />
+    <Compile Include="Assets\Scripts\spider scripts\spider shooter\SpiderBulllet.cs" />
+    <Compile Include="Assets\Scripts\spider scripts\spider shooter\SpiderShooter.cs" />
+    <Compile Include="Assets\Scripts\spider scripts\spider walker\SpiderWalker.cs" />
     <Reference Include="UnityEditor.StandardEvents">
-      <HintPath>D:/kodas world/koda conceptv1.0/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
+      <HintPath>D:/cit273/final project rpg/koda-prototype-v1.0/koda conceptv1.0/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>D:/kodas world/koda conceptv1.0/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>D:/cit273/final project rpg/koda-prototype-v1.0/koda conceptv1.0/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.PackageManagerUI.Editor">
-      <HintPath>D:/kodas world/koda conceptv1.0/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+      <HintPath>D:/cit273/final project rpg/koda-prototype-v1.0/koda conceptv1.0/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>D:/kodas world/koda conceptv1.0/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>D:/cit273/final project rpg/koda-prototype-v1.0/koda conceptv1.0/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>D:/unity/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -255,7 +263,7 @@
       <HintPath>D:/unity/Editor/Data/Managed/Unity.Locator.dll</HintPath>
     </Reference>
     <Reference Include="Facebook.Unity.Settings">
-      <HintPath>D:/kodas world/koda conceptv1.0/Library/FacebookSDK/Facebook.Unity.Settings.dll</HintPath>
+      <HintPath>D:/cit273/final project rpg/koda-prototype-v1.0/koda conceptv1.0/Library/FacebookSDK/Facebook.Unity.Settings.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
       <HintPath>D:/unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>

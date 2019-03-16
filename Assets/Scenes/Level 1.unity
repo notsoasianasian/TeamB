@@ -3797,6 +3797,16 @@ Prefab:
       propertyPath: m_SortingOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 50227437599177006, guid: 0663d2b25e8309d42ae65802bd28b650,
+        type: 2}
+      propertyPath: m_GravityScale
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114537417794269290, guid: 0663d2b25e8309d42ae65802bd28b650,
+        type: 2}
+      propertyPath: jumpSpeed
+      value: 19
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0663d2b25e8309d42ae65802bd28b650, type: 2}
   m_IsPrefabAsset: 0

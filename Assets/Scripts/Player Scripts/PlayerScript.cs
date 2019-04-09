@@ -58,7 +58,7 @@ public class PlayerScript : MonoBehaviour {
         //jumping
         if (yInput == true)
         {
-            if (IsOnTopOfCollider() && playerRigidbody.velocity.y == 0)
+            if (playerRigidbody.velocity.y == 0)
             {
                 yForce = jumpSpeed;
             }

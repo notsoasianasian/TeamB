@@ -29,7 +29,7 @@ public class CameraFollow : MonoBehaviour
             {
                 temp.x = maxX;
             }
-            temp.y = player.position.y + 3.5f;
+            temp.y = player.position.y + 4f;
 
             transform.position = temp;
         }

@@ -1,15 +1,11 @@
 fileFormatVersion: 2
-guid: 38767d0d2d63c2241b589da5fb1eece0
+guid: 206fde081697120409dee4024f8886d3
 TextureImporter:
   fileIDToRecycleName:
-    21300000: Koda jumping sprites (2)_0
-    21300002: Koda jumping sprites (2)_1
-    21300004: Koda jumping sprites (2)_2
-    21300006: Koda jumping sprites (2)_3
-    21300008: Koda jumping sprites (2)_4
-    21300010: Koda jumping sprites (2)_5
-    21300012: Koda jumping sprites (2)_6
-    21300014: Koda jumping sprites (2)_7
+    21300000: idle_0
+    21300002: idle_1
+    21300004: idle_2
+    21300006: idle_3
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -103,7 +99,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Koda jumping sprites (2)_0
+      name: idle_0
       rect:
         serializedVersion: 2
         x: 0
@@ -117,13 +113,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f0b338699c5aa3c47a82ccc5d87cbafb
+      spriteID: 09fb9998c980fd24e9d2f3fa19561746
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Koda jumping sprites (2)_1
+      name: idle_1
       rect:
         serializedVersion: 2
         x: 128
@@ -137,13 +133,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3a289ac74276790409d4f8dc4aed840f
+      spriteID: 8cad4ec54dae6ab40b6ff05b31503683
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Koda jumping sprites (2)_2
+      name: idle_2
       rect:
         serializedVersion: 2
         x: 256
@@ -157,78 +153,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9f3d477ea189ac246bbf0ae9408e87e4
+      spriteID: 1607de0be66fb5143a79281d6df55b18
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Koda jumping sprites (2)_3
+      name: idle_3
       rect:
         serializedVersion: 2
         x: 384
         y: 0
         width: 120
-        height: 240
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 515fe4b744243884c96e51bc58c345a4
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Koda jumping sprites (2)_4
-      rect:
-        serializedVersion: 2
-        x: 512
-        y: 0
-        width: 120
-        height: 232
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ea68bea2c3e6dc749904e6cd31b78b97
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Koda jumping sprites (2)_5
-      rect:
-        serializedVersion: 2
-        x: 640
-        y: 0
-        width: 120
-        height: 240
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d9bbb178405ad24419600556df1be447
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Koda jumping sprites (2)_6
-      rect:
-        serializedVersion: 2
-        x: 768
-        y: 0
-        width: 120
         height: 248
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -237,27 +173,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 81dbe4eefffc3be4583ce868f5f3335f
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Koda jumping sprites (2)_7
-      rect:
-        serializedVersion: 2
-        x: 896
-        y: 0
-        width: 120
-        height: 248
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4816d79cf0f11a047b6ab236c7de6bfc
+      spriteID: 3212bd79f54b97e4ebc99ed758ade7e1
       vertices: []
       indices: 
       edges: []
@@ -265,7 +181,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 0e36d9af0261d474893da27050a703a9
+    spriteID: e0ad5344f3ff7b141bb91b71850907a3
     vertices: []
     indices: 
     edges: []

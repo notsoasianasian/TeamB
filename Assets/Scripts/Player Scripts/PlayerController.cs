@@ -47,23 +47,51 @@ public class PlayerController : MonoBehaviour {
         float xforce = xInput * moveSpeed * Time.deltaTime;
         float yForce = 0;
 
-        if (xInput != 0)
+        if (xInput > 0.1)
         {
             anim.SetBool("Walk", true);
+            anim.SetBool("jump", false);
+            anim.SetBool("Idle", false);
+            anim.SetBool("walkleft", false);
+
         }
         else
         {
             anim.SetBool("Walk", false);
+            anim.SetBool("jump", false);
+            anim.SetBool("Idle", true);
+            anim.SetBool("walkleft", false);
         }
+
+        if (xInput < 0)
+        {
+
+            anim.SetBool("jump", false);
+            anim.SetBool("Idle", false);
+            anim.SetBool("walkleft", true);
+        }
+
         //jumping
         if (yInput == true)
         {
             if (playerRigidbody.velocity.y == 0)
             {
                 yForce = jumpSpeed;
+                anim.SetBool("jump", true);
+                anim.SetBool("Walk", false);
+                anim.SetBool("Idle", false);
+                anim.SetBool("walkleft", false);
+
+            }
+            else
+            {
+                anim.SetBool("jump", false);
+                anim.SetBool("Walk", false);
+                anim.SetBool("Idle", true);
+                anim.SetBool("walkleft", false);
             }
         }
-        
+
 
         Vector2 force = new Vector2(xforce, yForce);
 

@@ -6,25 +6,16 @@ using UnityEngine.UI;
 
 public class PauseMenu : MonoBehaviour
 {
-    public Button ResumeButton;
-    public Button OptionsButton;
-    public Button SaveButton;
-    public Button SaveExitButton;
-
     public void Resume()
     {
         
     }
-    public void Options()
+    public void MainMenu()
     {
-
+        Application.LoadLevel("MainMenu");
     }
-    public void Save()
+    public void Exit()
     {
-
-    }
-    public void SaveExit()
-    {
-        
+        Application.Quit();
     }
 }

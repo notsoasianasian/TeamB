@@ -8,4 +8,8 @@ public class MainMenuController : MonoBehaviour
     {
         Application.LoadLevel("LevelMenu");
     }
+    public void ExitGame()
+    {
+        Application.Quit();
+    }
 }

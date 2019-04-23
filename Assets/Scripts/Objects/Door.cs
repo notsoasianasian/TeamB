@@ -7,7 +7,7 @@ public class Door : MonoBehaviour
     public static Door instance;
     private BoxCollider2D box;
     private Animator anim;
-    [HideInInspector]
+   
     public int collectiblesCount;
 
 	// Use this for initialization

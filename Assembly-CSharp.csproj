@@ -71,6 +71,9 @@
     <Compile Include="Assets\Scripts\Game Scripts\LevelController.cs" />
     <Compile Include="Assets\Scripts\Game Scripts\MainMenuController.cs" />
     <Compile Include="Assets\Scripts\Game Scripts\PauseMenu.cs" />
+    <Compile Include="Assets\Scripts\Gameplay Controller\GameplayController.cs" />
+    <Compile Include="Assets\Scripts\Gameplay Controller\GemCounter.cs" />
+    <Compile Include="Assets\Scripts\Gameplay Controller\LevelTimer.cs" />
     <Compile Include="Assets\Scripts\Objects\Door.cs" />
     <Compile Include="Assets\Scripts\Player Scripts\PlayerController.cs" />
     <Compile Include="Assets\Scripts\spider scripts\spider jumper\SpiderJumper.cs" />

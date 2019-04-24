@@ -6,9 +6,13 @@ using UnityEngine.UI;
 
 public class PauseMenu : MonoBehaviour
 {
+    public GameObject visibility;
+
     public void Resume()
     {
-        
+        Time.timeScale = 1.0f;
+        Cursor.visible = false;
+        visibility.gameObject.SetActive (false);
     }
     public void MainMenu()
     {

@@ -1,13 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Door : MonoBehaviour
 {
     public static Door instance;
     private BoxCollider2D box;
     private Animator anim;
-   
+    public string levelToLoad;
+    public string areaTransitionName;
+
     public int collectiblesCount;
 
 	// Use this for initialization
@@ -47,7 +50,9 @@ public class Door : MonoBehaviour
     {
         if(target.tag == "Player")
         {
-            Debug.Log("game finished");
+            SceneManager.LoadScene(levelToLoad);
+
+            PlayerController.instance.areaTransitionName = areaTransitionName;
         }
     }
 }

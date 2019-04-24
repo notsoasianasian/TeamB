@@ -1,16 +1,55 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameplayController : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    [SerializeField]
+    private GameObject pausePanel;
+
+    [SerializeField]
+    private Button resumeGame;
+
+    
+
+    public void PauseGame()
+    {
+        Time.timeScale = 0f;
+        pausePanel.SetActive(true);
+        resumeGame.onClick.RemoveAllListeners();
+        resumeGame.onClick.AddListener(() => ResumeGame());
+
+    }
+
+    public void GoToMenu()
+    {
+        Time.timeScale = 1f;
+        Application.LoadLevel("MainMenu");
+    }
+
+    public void ResumeGame()
+    {
+        Time.timeScale = 1f;
+        pausePanel.SetActive(false);
+    }
+
+    public void RestartGame()
+    {
+        Time.timeScale = 1f;
+        Application.LoadLevel("level 1-1");
+    }
+
+    public void PlayerDied()
+    {
+        Time.timeScale = 0f;
+        pausePanel.SetActive(true);
+        resumeGame.onClick.RemoveAllListeners();
+        resumeGame.onClick.AddListener(() => RestartGame());
+    }
+
+    public void NextLevel()
+    {
+
+    }
 }

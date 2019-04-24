@@ -13,12 +13,28 @@ public class PlayerController : MonoBehaviour {
     public float standingContactDistance = 0.1f;
     public float jumpSpeed = 50f;
     private Animator anim;
+    public static PlayerController instance;
+    public string areaTransitionName;
 
     public void Awake()
     {
         playerRigidbody = GetComponent<Rigidbody2D>();
         playerCollider = GetComponent<Collider2D>();
         anim = GetComponent<Animator>();
+    }
+
+    private void Start()
+    {
+        if(instance == null)
+        {
+            instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+        
+        DontDestroyOnLoad(gameObject);
     }
 
     public void FixedUpdate()

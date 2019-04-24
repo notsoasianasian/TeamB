@@ -61,9 +61,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\AreaEntrance.cs" />
     <Compile Include="Assets\CameraFollow.cs" />
     <Compile Include="Assets\Scripts\Game Scripts\AudioPlay.cs" />
     <Compile Include="Assets\Scripts\Game Scripts\Destroy.cs" />
+    <Compile Include="Assets\Scripts\Game Scripts\EssentialsLoader.cs" />
     <Compile Include="Assets\Scripts\Game Scripts\gemPart.cs" />
     <Compile Include="Assets\Scripts\Game Scripts\GemScript.cs" />
     <Compile Include="Assets\Scripts\Game Scripts\GroundCheck.cs" />

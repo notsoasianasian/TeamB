@@ -10,7 +10,7 @@ public class OpenPauseMenu : MonoBehaviour
     {
         if (Input.GetKeyDown("escape"))
         {
-            Time.timeScale = 0.1f;
+            Time.timeScale = 0.0f;
             Cursor.visible = true;
             visibility.gameObject.SetActive(true);
         }

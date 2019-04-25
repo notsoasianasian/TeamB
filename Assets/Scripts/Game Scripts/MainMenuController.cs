@@ -4,9 +4,22 @@ using UnityEngine;
 
 public class MainMenuController : MonoBehaviour
 {
+    public GameObject switchMainMenu;
+    public GameObject switchControlMenu;
+
     public void PlayGame()
     {
         Application.LoadLevel("LevelMenu");
+    }
+    public void OpenControls()
+    {
+        switchMainMenu.gameObject.SetActive(false);
+        switchControlMenu.gameObject.SetActive(true);
+    }
+    public void CloseControls()
+    {
+        switchMainMenu.gameObject.SetActive(true);
+        switchControlMenu.gameObject.SetActive(false);
     }
     public void ExitGame()
     {

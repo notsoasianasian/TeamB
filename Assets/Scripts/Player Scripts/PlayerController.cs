@@ -2,16 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(Rigidbody2D))]
-public class PlayerController : MonoBehaviour {
-
+public class PlayerController : MonoBehaviour
+{
     private Rigidbody2D playerRigidbody;
     private Collider2D playerCollider;
-    public float moveSpeed = 1f;
-    public float maxRunSpeed = 5f;
-    public bool capVelocityEnabled = true;
-    public float standingContactDistance = 0.1f;
-    public float jumpSpeed = 50f;
+
+    public float moveForce, jumpForce, maxVelocity;
+    private bool grounded;
     private Animator anim;
     public static PlayerController instance;
     public string areaTransitionName;
@@ -25,7 +22,7 @@ public class PlayerController : MonoBehaviour {
 
     private void Start()
     {
-        if(instance == null)
+        if (instance == null)
         {
             instance = this;
         }
@@ -33,121 +30,56 @@ public class PlayerController : MonoBehaviour {
         {
             Destroy(gameObject);
         }
-        
+
         DontDestroyOnLoad(gameObject);
     }
 
     public void FixedUpdate()
     {
-        if (playerRigidbody != null)
-        {
-            ApplyInput();
-            if (capVelocityEnabled)
-            {
-                CapVelocity();
-            }
-
-        }
-        else
-        {
-            Debug.LogWarning("Rigidbody not attached to player" + gameObject.name);
-        }
-
+        PlayerWalkKeyboard();
     }
 
-    public void ApplyInput()
+    void PlayerWalkKeyboard()
     {
-        float xInput = Input.GetAxis("Horizontal");
-        bool yInput = Input.GetKeyDown(KeyCode.Space);
-        //left right movement
-        float xforce = xInput * moveSpeed * Time.deltaTime;
-        float yForce = 0;
+        float forceX = 0f;
+        float forceY = 0f;
 
-        if (xInput > 0.1)
+        float vel = Mathf.Abs(playerRigidbody.velocity.x);
+
+        float h = Input.GetAxisRaw("Horizontal");
+
+        if (h > 0)
         {
-            anim.SetBool("Walk", true);
-            anim.SetBool("jump", false);
-            anim.SetBool("Idle", false);
-            anim.SetBool("walkleft", false);
+            if (vel < maxVelocity)
+            {
+                forceX = moveForce;
+            }
 
+            Vector3 scale = transform.localScale;
+            scale.x = 1f;
+            transform.localScale = scale;
+
+            anim.SetBool("Walk", true);
         }
-        else
+        else if (h < 0)
+        {
+            if (vel < maxVelocity)
+            {
+                forceX = -moveForce;
+            }
+
+            Vector3 scale = transform.localScale;
+            scale.x = -1f;
+            transform.localScale = scale;
+
+            anim.SetBool("Walk", true);
+        }
+        else if (h == 0)
         {
             anim.SetBool("Walk", false);
-            anim.SetBool("jump", false);
-            anim.SetBool("Idle", true);
-            anim.SetBool("walkleft", false);
         }
 
-        if (xInput < 0)
-        {
-
-            anim.SetBool("jump", false);
-            anim.SetBool("Idle", false);
-            anim.SetBool("walkleft", true);
-        }
-
-        //jumping
-        if (yInput == true)
-        {
-            if (playerRigidbody.velocity.y == 0)
-            {
-                yForce = jumpSpeed;
-                anim.SetBool("jump", true);
-                anim.SetBool("Walk", false);
-                anim.SetBool("Idle", false);
-                anim.SetBool("walkleft", false);
-
-            }
-            else
-            {
-                anim.SetBool("jump", false);
-                anim.SetBool("Walk", false);
-                anim.SetBool("Idle", true);
-                anim.SetBool("walkleft", false);
-            }
-        }
-
-
-        Vector2 force = new Vector2(xforce, yForce);
-
-        playerRigidbody.AddForce(force, ForceMode2D.Impulse);
-        
-
+        playerRigidbody.AddForce(new Vector2(forceX, forceY));
     }
 
-    public void CapVelocity()
-    {
-        float cappedXVelocity = Mathf.Min(Mathf.Abs(playerRigidbody.velocity.x), maxRunSpeed) * Mathf.Sign(playerRigidbody.velocity.x);
-        float cappedYVelocity = playerRigidbody.velocity.y;
-        
-        playerRigidbody.velocity = new Vector3(cappedXVelocity, cappedYVelocity);
-    }
-
-    public bool IsOnTopOfCollider()
-    {
-        if(playerCollider)
-        {
-            ContactFilter2D filter2D = new ContactFilter2D();
-            filter2D.useTriggers = false;
-
-            RaycastHit2D[] results = new RaycastHit2D[10];
-
-            //playerCollider.OverlapCollider(filter2D, results);
-            playerCollider.Cast(new Vector2(0, -1), filter2D, results, standingContactDistance);
-
-            foreach(RaycastHit2D hit in results)
-            {
-                    //checks to see if player is on top of a collider
-                    if(hit.collider.transform.position.z == playerCollider.transform.position.z)
-                {
-                    return true;
-                }
-            }
-
-        }
-
-        return false;
-    }
-        
 }

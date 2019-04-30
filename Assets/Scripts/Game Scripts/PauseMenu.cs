@@ -7,11 +7,11 @@ using UnityEngine.UI;
 public class PauseMenu : MonoBehaviour
 {
     public GameObject visibility;
-    public GameObject hideplayer;
+    //public GameObject hideplayer;
 
     public void Resume()
     {
-        hideplayer.gameObject.SetActive(false);
+        //hideplayer.gameObject.SetActive(false);
         Time.timeScale = 1.0f;
         Cursor.visible = false;
         visibility.gameObject.SetActive (false);

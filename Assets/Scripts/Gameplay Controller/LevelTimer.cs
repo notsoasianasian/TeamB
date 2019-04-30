@@ -35,10 +35,10 @@ public class LevelTimer : MonoBehaviour
     void GetReferences()
     {
         player = GameObject.Find("Player");
-        slider = GameObject.Find("TimeSlider").GetComponent<Slider>();
+        //slider = GameObject.Find("TimeSlider").GetComponent<Slider>();
 
-        slider.minValue = 0f;
-        slider.maxValue = time;
-        slider.value = slider.maxValue;
+        //slider.minValue = 0f;
+        //slider.maxValue = time;
+        //slider.value = slider.maxValue;
     }
 }

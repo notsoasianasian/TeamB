@@ -1,17 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class LevelController : MonoBehaviour
 {
     public void PlayGame()
     {
-       SceneManager.LoadScene("level 1-1");
+        Application.LoadLevel("gameplay");
     }
 
     public void BackToMenu()
     {
-        SceneManager.LoadScene("MainMenu");
+        Application.LoadLevel("MainMenu");
     }
 }

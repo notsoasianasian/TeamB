@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class MainMenuController : MonoBehaviour
 {
@@ -10,7 +9,7 @@ public class MainMenuController : MonoBehaviour
 
     public void PlayGame()
     {
-        SceneManager.LoadScene("level 1-1");
+        Application.LoadLevel("LevelMenu");
     }
     public void OpenControls()
     {

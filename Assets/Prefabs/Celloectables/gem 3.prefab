@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4802368586606004}
   - component: {fileID: 212720368004459170}
   - component: {fileID: 61694841682134240}
-  - component: {fileID: 114064882025988236}
+  - component: {fileID: 5004770168581552058}
   m_Layer: 0
   m_Name: gem 3
   m_TagString: gem
@@ -107,7 +107,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.7, y: 1.55}
   m_EdgeRadius: 0
---- !u!114 &114064882025988236
+--- !u!114 &5004770168581552058
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

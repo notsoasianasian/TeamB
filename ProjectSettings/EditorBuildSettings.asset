@@ -8,18 +8,9 @@ EditorBuildSettings:
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
-  - enabled: 0
-    path: Assets/Scenes/Betas/gameplay.unity
-    guid: 78a3705de982f8c4c90d88fb8eccef8e
   - enabled: 1
     path: Assets/Scenes/MainMenu.unity
     guid: fd4da508419b7c94f95a2e2f60f31527
-  - enabled: 1
-    path: Assets/Scenes/LevelMenu.unity
-    guid: 4b33e28ac1e42f243a22f5ed3cb03f2c
-  - enabled: 0
-    path: Assets/Scenes/PauseMenu.unity
-    guid: 3eb7161bed70c3141871b8a095953516
   - enabled: 1
     path: Assets/Scenes/Forest levels/level 1-1.unity
     guid: e533b230d94005644bc137b711973871
